@@ -4,6 +4,8 @@ import 'package:alquran/app/modules/home/views/home_view.dart';
 import 'package:alquran/app/modules/introduction/bindings/introduction_binding.dart';
 import 'package:alquran/app/modules/introduction/views/introduction_view.dart';
 
+import '../modules/home/bindings/home_binding.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -12,6 +14,11 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
+    GetPage(
+      name: _Paths.HOME,
+      page: () => HomeView(),
+      binding: HomeBinding(),
+    ),
     GetPage(
       name: _Paths.INTRODUCTION,
       page: () => IntroductionView(),
